@@ -1,0 +1,16 @@
+services:
+  jupyter:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
+    ports:
+      - "${JUPYTER_PORT}:${JUPYTER_PORT}"
+    environment:
+      - JUPYTER_PORT=${JUPYTER_PORT}
+    volumes:
+      - jupyter-data:/workspace
+
+volumes:
+  jupyter-data:
