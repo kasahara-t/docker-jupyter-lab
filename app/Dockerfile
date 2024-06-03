@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
 # Jupyter Labをインストール
 RUN pip install --no-cache-dir jupyterlab
 
+# Jupyter設定ファイルをコピー
+COPY jupyter_lab_config.py /root/.jupyter/
+
 # コンテナ起動時にJupyter Labを実行
 ENV JUPYTER_PORT=8888
-CMD ["sh", "-c", "jupyter lab --ip=0.0.0.0 --port=${JUPYTER_PORT} --no-browser --allow-root --notebook-dir=/workspace"]
+CMD ["sh", "-c", "jupyter lab --notebook-dir=/workspace"]

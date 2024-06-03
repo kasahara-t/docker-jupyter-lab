@@ -9,8 +9,14 @@ services:
       - "${JUPYTER_PORT}:${JUPYTER_PORT}"
     environment:
       - JUPYTER_PORT=${JUPYTER_PORT}
+    secrets:
+      - jupyter_password
     volumes:
       - jupyter-data:/workspace
 
 volumes:
   jupyter-data:
+
+secrets:
+  jupyter_password:
+    file: ./app/secrets/jupyter_password.txt
