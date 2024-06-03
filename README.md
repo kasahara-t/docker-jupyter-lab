@@ -10,19 +10,19 @@ This repository contains a Docker configuration for running Jupyter Lab.
 
 1. Clone this repository:
 
-```bash
-git clone https://github.com/kasahara-t/docker-jupyter-lab.git
-```
+    ```bash
+    git clone https://github.com/kasahara-t/docker-jupyter-lab.git
+    ```
 
 2. Build and Run the Docker container
 
-```bash
-make start
-```
+    ```bash
+    make start
+    ```
 
 3. Access Jupyter Lab in your browser:
 
-Open your browser and go to `http://localhost:8888`.
+    Open your browser and go to `http://localhost:8888`.
 
 ## Customization
 
