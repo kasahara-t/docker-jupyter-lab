@@ -1,7 +1,7 @@
 services:
   jupyter:
     build:
-      context: ./app
+      context: ./jupyter
       dockerfile: Dockerfile
       args:
         PYTHON_VERSION: ${PYTHON_VERSION}
@@ -19,4 +19,4 @@ volumes:
 
 secrets:
   jupyter_password:
-    file: ./app/secrets/jupyter_password.txt
+    file: ./jupyter/secrets/jupyter_password.txt
